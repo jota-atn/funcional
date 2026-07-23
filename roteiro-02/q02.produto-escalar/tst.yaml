@@ -1,0 +1,11 @@
+tests:
+- type: script
+  xxx-script: "clojure -M -i /usr/local/lib/tst/tst-clojure.clj -- public-asserts.clj {}"
+  script: "bb /usr/local/lib/tst/tst-clojure.clj -- public-asserts.clj {}"
+
+ignore:
+  - tests.clj
+  - test-engine.clj
+  - public-asserts.clj
+  - private-asserts.clj
+  - asserts.clj
