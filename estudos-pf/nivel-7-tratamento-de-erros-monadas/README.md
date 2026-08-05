@@ -2,7 +2,7 @@
 title: Nível 7 — Tratamento de Erros com Mônadas
 sub_title: Result, Ok, Err e o padrão que resolve tudo isso
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 7 — Tratamento de Erros com Mônadas

@@ -2,7 +2,7 @@
 title: Exercícios — Nível 7
 sub_title: Tratamento de Erros com Mônadas
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Exercícios — Nível 7: Tratamento de Erros com Mônadas
