@@ -2,7 +2,7 @@
 title: Nível 5 — Recursividade
 sub_title: Repetição sem laços, sem atribuições
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 5 — Recursividade

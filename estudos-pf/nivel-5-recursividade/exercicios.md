@@ -2,7 +2,7 @@
 title: Exercícios — Nível 5
 sub_title: Recursividade
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Exercícios — Nível 5: Recursividade
