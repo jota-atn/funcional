@@ -206,5 +206,5 @@ operação alterou um valor que já existia).
 
 <!-- incremental_lists: false -->
 
-Se todos os itens estão marcados, resolva `exercicios.md` e depois leia o
-**Nível 5** (aplicações reais).
+Se todos os itens estão marcados, resolva `exercicios.md` e depois avance
+para o **Nível 5** (Recursividade).

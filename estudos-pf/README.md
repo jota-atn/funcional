@@ -10,11 +10,12 @@ theme:
 
 Este diretório é uma trilha de estudos **cumulativa** de Programação
 Funcional, construída em cima do conteúdo dado no curso (material em
-`/srv`). A ideia é que você comece do zero e vá subindo de nível conforme
-o curso avança — hoje ela cobre mentalidade funcional, a sagrada trindade
-(map/filter/reduce), sequências, pipelines e abstração de dados; conforme
-novos assuntos forem dados em aula (recursão, mônadas, concorrência,
-etc.), novos níveis serão adicionados em cima destes.
+`/srv` e `~/roteiro-10`). A ideia é que você comece do zero e vá subindo
+de nível conforme o curso avança — hoje ela cobre mentalidade funcional,
+a sagrada trindade (map/filter/reduce), sequências, pipelines, abstração
+de dados, recursividade, tipos algébricos, tratamento de erros com
+mônadas e cálculo lambda; conforme novos assuntos forem dados em aula,
+novos níveis serão adicionados em cima destes.
 
 <!-- end_slide -->
 
@@ -40,10 +41,22 @@ nível 3  Pipelining / composição em cadeia
 nível 4  Abstração de Dados sem classes (TADs funcionais)
    │
    ▼
-nível 5  Aplicações reais (leitura, sem exercícios)
+nível 5  Recursividade
    │
    ▼
-(níveis futuros: recursão, mônadas, concorrência... conforme o curso avança)
+nível 6  Tipos Algébricos
+   │
+   ▼
+nível 7  Tratamento de Erros com Mônadas
+   │
+   ▼
+nível 8  Cálculo Lambda
+   │
+   ▼
+nível 9  Aplicações reais (leitura, sem exercícios — fecha a trilha)
+   │
+   ▼
+(níveis futuros: concorrência, etc... conforme o curso avança)
 ```
 
 <!-- end_slide -->
@@ -72,16 +85,16 @@ Cada pasta `nivel-N-*` tem:
 
 <!-- incremental_lists: false -->
 
-Ao terminar o nível 4, leia o nível 5 — é só texto, mostrando onde essas
-mesmas ideias (imutabilidade, map/filter/reduce, pipelines, TADs) aparecem
-em sistemas de verdade que você provavelmente já usa.
+Ao terminar o nível 4, siga para os níveis 5 a 8 (recursividade, tipos
+algébricos, mônadas e cálculo lambda). Só então leia o nível 9 — é só
+texto, mostrando onde essas ideias (de imutabilidade a mônadas e
+cálculo lambda) aparecem em sistemas de verdade que você provavelmente
+já usa. É o nível que fecha a trilha.
 
 <!-- end_slide -->
 
 ## O que ainda não está aqui
 
-Recursão de cauda/`loop`+`recur`, mônadas/`Result`, tipos algébricos e
-concorrência ainda não têm nível próprio — esse conteúdo vem mais adiante
-no curso (em `intro-a-recursao.md`, `intro-a-monadas.md`,
-`tipos-algebricos.md`). Quando chegar a hora, novos níveis serão
-adicionados a esta trilha, continuando de onde o nível 4 parou.
+Concorrência e o que mais vier depois no curso ainda não têm nível
+próprio. Quando chegar a hora, novos níveis serão inseridos antes do
+nível 9 (Aplicações Reais), que continua sendo o fechamento da trilha.

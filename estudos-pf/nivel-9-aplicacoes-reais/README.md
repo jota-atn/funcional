@@ -1,16 +1,17 @@
 ---
-title: Nível 5 — Aplicações Reais
+title: Nível 9 — Aplicações Reais
 sub_title: Onde essas ideias aparecem em sistemas reais
 theme:
   name: p1
 ---
 
-# Nível 5 — Onde essas ideias aparecem em sistemas reais
+# Nível 9 — Onde essas ideias aparecem em sistemas reais
 
-**Pré-requisito:** Níveis 0 a 4 completos. Este nível não tem exercícios —
-é só leitura, pra você enxergar que o conteúdo desta trilha não é um
-exercício de sala de aula isolado: é a base de ferramentas que rodam em
-produção, em escala gigante, todo dia.
+**Pré-requisito:** Níveis 0 a 8 completos — este é o **último nível**
+desta trilha. Ele não tem exercícios — é só leitura, pra você enxergar
+que o conteúdo inteiro que você estudou não é um exercício de sala de
+aula isolado: é a base de ferramentas que rodam em produção, em escala
+gigante, todo dia.
 
 <!-- end_slide -->
 
@@ -174,11 +175,111 @@ diretamente, é derivado.
 
 <!-- end_slide -->
 
-## O fio condutor
+## 8. Recursão em compiladores, parsers e árvores de arquivos
+
+Qualquer ferramenta que processa código-fonte (compiladores,
+interpretadores, formatadores como o `black` de Python) representa o
+programa como uma **árvore** (a *AST* — árvore de sintaxe abstrata) e
+percorre essa árvore recursivamente: cada nó pode conter outros nós do
+mesmo tipo, então a função que processa um nó chama a si mesma para
+processar os filhos — exatamente a estrutura do **Nível 5**.
+
+```python
+def avalia(no):
+    if no.tipo == "numero":
+        return no.valor
+    if no.tipo == "soma":
+        return avalia(no.esquerda) + avalia(no.direita)  # chamada recursiva
+```
+
+O mesmo vale para percorrer diretórios (`os.walk`, recursivamente, uma
+pasta pode conter outras pastas) e para navegar HTML/JSON aninhado.
+
+<!-- end_slide -->
+
+## 9. Tipos algébricos em linguagens de produção
+
+O que o **Nível 6** chamou de "tipo soma" tem nome e sintaxe própria em
+várias linguagens usadas em produção hoje. Em Rust, um `enum` é
+literalmente um tipo soma, e o compilador **obriga** você a tratar
+todos os casos:
+
+```rust
+enum Forma {
+    Circulo(f64),           // um F64 (raio)
+    Retangulo(f64, f64),    // dois f64 (lados)
+}
+
+fn area(f: Forma) -> f64 {
+    match f {
+        Forma::Circulo(r) => std::f64::consts::PI * r * r,
+        Forma::Retangulo(a, b) => a * b,
+    }   // esquecer um caso é ERRO DE COMPILAÇÃO, não bug em produção
+}
+```
+
+TypeScript tem o mesmo padrão com *union types* (`type Forma = Circulo
+| Retangulo`) e *discriminated unions* — o `match..case` do Python que
+vimos no Nível 6 é a versão mais recente dessa mesma ideia chegando a
+uma linguagem mainstream.
+
+<!-- end_slide -->
+
+## 10. `Result`/`Option` em produção: Rust
+
+Rust vai além de recomendação: a linguagem **não tem exceções para
+erros recuperáveis**. Toda função que pode falhar é obrigada, pelo
+sistema de tipos, a devolver `Result<T, E>` — exatamente o padrão do
+**Nível 7**, só que imposto pelo compilador em vez de por convenção:
+
+```rust
+fn divide(a: f64, b: f64) -> Result<f64, String> {
+    if b == 0.0 {
+        return Err("divisão por zero".to_string());
+    }
+    Ok(a / b)
+}
+
+fn processa(a: f64, b: f64) -> Result<f64, String> {
+    divide(a, b).map(|r| r * 2.0)   // o mesmo .map() do Nível 7
+}
+```
+
+O operador `?` de Rust (`divide(a, b)?`) é açúcar sintático para "se
+`Err`, retorne o erro imediatamente; se `Ok`, desempacote e continue" —
+o mesmo `.and_then()` encadeado, só que embutido na sintaxe da
+linguagem.
+
+<!-- end_slide -->
+
+## 11. Cálculo lambda por trás das linguagens do dia a dia
+
+O **Nível 8** não é curiosidade histórica isolada — é o modelo que
+diversas linguagens usam de fato, direta ou indiretamente:
+
+- **Arrow functions de JavaScript** (`a => b => a`) são, literalmente,
+  a notação do cálculo lambda com `λ` trocado por `=>`;
+- **currying nativo** em Haskell, OCaml e F# (toda função de "vários
+  argumentos" é, por trás, uma cadeia de funções de um argumento só,
+  igual vimos com `f a b = (f a) b`);
+- **closures** — uma função que "lembra" variáveis do escopo onde foi
+  criada — são a versão prática de abstrações como `λa. (λb. a)` do
+  Nível 8, que capturam `a` dentro da função interna;
+- os algoritmos de **inferência de tipos** de TypeScript, Rust e OCaml
+  (Hindley-Milner e variantes) são construídos formalmente em cima do
+  cálculo lambda tipado — a matemática que valida "esse tipo bate com
+  aquele" antes mesmo do programa rodar vem diretamente daqui.
+
+<!-- end_slide -->
+
+## O fio condutor de toda a trilha
 
 Em todo exemplo acima, a razão de ser dessas escolhas é sempre a mesma:
 **funções puras + imutabilidade permitem raciocinar sobre uma parte do
 sistema sem precisar entender o sistema inteiro**, e habilitam
-paralelismo, cache, undo/histórico e testes automáticos de um jeito que
-código com mutação espalhada não permite. É essa mesma mentalidade
-(Nível 0) que sustenta tudo o que você estudou nesta trilha.
+paralelismo, cache, undo/histórico, tratamento de erro sem exceções e
+testes automáticos de um jeito que código com mutação espalhada não
+permite. Da mentalidade funcional do Nível 0 até o modelo teórico
+mínimo do cálculo lambda no Nível 8, é essa mesma ideia — funções como
+as únicas peças de que você precisa — que sustenta tudo o que você
+estudou nesta trilha.
