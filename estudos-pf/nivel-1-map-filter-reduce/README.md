@@ -2,7 +2,7 @@
 title: Nível 1 — map, filter, reduce
 sub_title: A Sagrada Trindade
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 1 — map, filter, reduce (a Sagrada Trindade)

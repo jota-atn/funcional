@@ -2,7 +2,7 @@
 title: Exercícios — Nível 1
 sub_title: map, filter, reduce
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Exercícios — Nível 1: map, filter, reduce

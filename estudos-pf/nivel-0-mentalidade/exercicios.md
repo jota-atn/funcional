@@ -2,7 +2,7 @@
 title: Exercícios — Nível 0
 sub_title: Mentalidade Funcional
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Exercícios — Nível 0: Mentalidade Funcional

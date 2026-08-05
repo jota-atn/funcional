@@ -2,7 +2,7 @@
 title: Nível 9 — Aplicações Reais
 sub_title: Onde essas ideias aparecem em sistemas reais
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 9 — Onde essas ideias aparecem em sistemas reais

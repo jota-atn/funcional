@@ -2,7 +2,7 @@
 title: Nível 0 — Mentalidade Funcional
 sub_title: Estudos de Programação Funcional
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 0 — Mentalidade Funcional

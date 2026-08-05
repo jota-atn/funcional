@@ -2,7 +2,7 @@
 title: Exercícios — Nível 3
 sub_title: Pipelining
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Exercícios — Nível 3: Pipelining

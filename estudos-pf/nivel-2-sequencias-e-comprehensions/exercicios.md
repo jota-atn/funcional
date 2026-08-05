@@ -2,7 +2,7 @@
 title: Exercícios — Nível 2
 sub_title: Sequências, Comprehensions e Generators
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Exercícios — Nível 2: Sequências, Comprehensions e Generators

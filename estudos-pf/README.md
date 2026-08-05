@@ -3,7 +3,7 @@ title: Estudos de Programação Funcional
 sub_title: Trilha por Níveis
 author: Roteiro de estudos
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Estudos de Programação Funcional — Trilha por Níveis

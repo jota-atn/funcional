@@ -2,7 +2,7 @@
 title: Nível 4 — Abstração de Dados
 sub_title: TADs Funcionais sem Classes
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 4 — Abstração de Dados sem Classes (TADs Funcionais)

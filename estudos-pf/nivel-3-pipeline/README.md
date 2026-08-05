@@ -2,7 +2,7 @@
 title: Nível 3 — Pipelining
 sub_title: Composição em Cadeia
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 3 — Pipelining / Composição em Cadeia

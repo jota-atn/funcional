@@ -2,7 +2,7 @@
 title: Exercícios — Nível 4
 sub_title: Abstração de Dados
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Exercícios — Nível 4: Abstração de Dados

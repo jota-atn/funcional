@@ -2,7 +2,7 @@
 title: Nível 2 — Sequências e Comprehensions
 sub_title: Comprehensions e Generators
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 2 — Sequências, Comprehensions e Generators
