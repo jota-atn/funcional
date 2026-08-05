@@ -2,7 +2,7 @@
 title: Exercícios — Nível 6
 sub_title: Tipos Algébricos
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Exercícios — Nível 6: Tipos Algébricos

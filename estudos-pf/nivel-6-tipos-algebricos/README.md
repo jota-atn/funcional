@@ -2,7 +2,7 @@
 title: Nível 6 — Tipos Algébricos
 sub_title: Construindo tipos por composição
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 6 — Tipos Algébricos
