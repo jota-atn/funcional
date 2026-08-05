@@ -2,7 +2,7 @@
 title: Nível 8 — Cálculo Lambda
 sub_title: A menor linguagem de programação possível
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Nível 8 — Cálculo Lambda

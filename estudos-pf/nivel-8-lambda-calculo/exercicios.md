@@ -2,7 +2,7 @@
 title: Exercícios — Nível 8
 sub_title: Cálculo Lambda
 theme:
-  name: p1
+  name: catppuccin-mocha
 ---
 
 # Exercícios — Nível 8: Cálculo Lambda
